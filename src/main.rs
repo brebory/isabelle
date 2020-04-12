@@ -2,6 +2,11 @@ use std::env;
 use std::path::PathBuf;
 use warp::Filter;
 
+mod lib;
+
+use isabelle::discord;
+use isabelle::web;
+
 #[tokio::main]
 async fn main() {
     let content_dir = env::var("CONTENT_DIR")
